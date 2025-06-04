@@ -33,5 +33,11 @@ if not questions:
 else:
     score = 0
     asked_questions = []
-    
+
+    while True:
+        # Pick a new random question only if needed
+        if len(asked_questions) == len(questions):  
+            print("\n🎉 You've completed all questions! Final Score:", score, "/", len(questions))
+            break
+        
 # end
