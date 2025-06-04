@@ -71,6 +71,12 @@ while running:
     elif show_saved_message:
         draw_text("Saved! Add another? (y/n)", 40, 500, large_font, WHITE)
 
+    pygame.display.flip()
+
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False 
+
 # end
 pygame.quit()
 sys.exit()
