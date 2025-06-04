@@ -32,4 +32,9 @@ inputs = [""] * len(labels)
 current_input = 0
 name = ""
 
+# App states
+file_named = False
+adding_question = True
+show_saved_message = False
+
 # end
