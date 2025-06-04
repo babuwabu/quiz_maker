@@ -52,5 +52,10 @@ def save_question_to_file(name, data):
         file.write("d) " + data[4] + "\n")
         file.write("ANSWER: " + data[5].lower() + "\n")
         file.write("::END::\n\n")
-        
+
+# While the user wants to add questions:
+running = True
+while running:
+    screen.blit(bg_image, (0, 0)) 
+
 # end
