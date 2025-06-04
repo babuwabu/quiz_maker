@@ -86,6 +86,23 @@ while running:
                     name = name[:-1]
                 else:
                     name += event.unicode
+            # Ask if user wants to add another question
+            elif adding_question:
+                if event.key == pygame.K_RETURN:
+                    if all(inputs) and inputs[5].lower() in ['a', 'b', 'c', 'd']:
+                        save_question_to_file(name, inputs) # Save question and choices to the file
+                        show_saved_message = True
+                        adding_question = False
+                    else:
+                        print("Please fill all fields and enter a valid correct answer (a/b/c/d).") # Validate correct answer is one of a/b/c/d
+                elif event.key == pygame.K_TAB:
+                    current_input = (current_input + 1) % len(inputs)
+                elif event.key == pygame.K_BACKSPACE:
+                    inputs[current_input] = inputs[current_input][:-1]
+                elif event.key == pygame.K_ESCAPE:
+                    running = False
+                else:
+                    inputs[current_input] += event.unicode
 
 # end
 pygame.quit()
