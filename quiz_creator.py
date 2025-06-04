@@ -62,6 +62,15 @@ while running:
         draw_text("Enter filename (e.g. quiz.txt):", 40, 50, large_font, WHITE)
         draw_text(name, 40, 100, font, BLUE)
 
+    # Show input fields for: Question, Choice a,b,c, and d, and Correct answer (a/b/c/d)
+    elif adding_question:
+        draw_text("Enter your question and answers:", 40, 30, large_font, WHITE)
+        for i, label in enumerate(labels):
+            draw_text(f"{label} {inputs[i]}", 40, 80 + i * 50, font, BLUE if i == current_input else WHITE)
+        draw_text("ENTER = Save | TAB = Next | ESC = Quit", 40, 440, font, WHITE)
+    elif show_saved_message:
+        draw_text("Saved! Add another? (y/n)", 40, 500, large_font, WHITE)
+
 # end
 pygame.quit()
 sys.exit()
