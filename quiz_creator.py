@@ -57,6 +57,10 @@ def save_question_to_file(name, data):
 running = True
 while running:
     screen.blit(bg_image, (0, 0)) 
+    
+    if not file_named:
+        draw_text("Enter filename (e.g. quiz.txt):", 40, 50, large_font, WHITE)
+        draw_text(name, 40, 100, font, BLUE)
 
 # end
 pygame.quit()
