@@ -37,4 +37,9 @@ file_named = False
 adding_question = True
 show_saved_message = False
 
+def draw_text(text, x, y, font, color=BLACK):
+    text_surf = font.render(text, True, color)
+    screen.blit(text_surf, (x, y))
+
+
 # end
