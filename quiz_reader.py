@@ -39,5 +39,9 @@ else:
         if len(asked_questions) == len(questions):  
             print("\n🎉 You've completed all questions! Final Score:", score, "/", len(questions))
             break
-        
+
+        current_question = random.choice(questions)
+        while current_question in asked_questions:
+            current_question = random.choice(questions)
+
 # end
