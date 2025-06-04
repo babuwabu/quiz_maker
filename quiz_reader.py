@@ -28,4 +28,10 @@ def load_quiz(filename):
 quiz_filename = "quiz.txt"  # Change to match the actual filename
 questions = load_quiz(quiz_filename)
 
+if not questions:
+    print("No questions found. Please check the file format.")
+else:
+    score = 0
+    asked_questions = []
+    
 # end
