@@ -10,6 +10,19 @@ def load_quiz(filename):
         content = file.read().split("::END::\n\n")  # Split questions
         for block in content:
             lines = [line.strip() for line in block.split("\n") if line.strip()]
-            
+        if len(lines) >= 7:
+                q_data = {
+                    "question": lines[1],
+                    "choices": {
+                        "a": lines[2][3:].strip(),
+                        "b": lines[3][3:].strip(),
+                        "c": lines[4][3:].strip(),
+                        "d": lines[5][3:].strip(),
+                    },
+                    "answer": lines[6][-1].strip().lower()
+                }
+                questions.append(q_data)
+    return questions
+
 # load the quiz
 # end
