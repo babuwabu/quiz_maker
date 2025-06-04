@@ -41,5 +41,16 @@ def draw_text(text, x, y, font, color=BLACK):
     text_surf = font.render(text, True, color)
     screen.blit(text_surf, (x, y))
 
-
+def save_question_to_file(name, data):
+    with open(name, "a") as file:
+      
+        file.write("::QUESTION::\n")
+        file.write(data[0] + "\n")
+        file.write("a) " + data[1] + "\n")
+        file.write("b) " + data[2] + "\n")
+        file.write("c) " + data[3] + "\n")
+        file.write("d) " + data[4] + "\n")
+        file.write("ANSWER: " + data[5].lower() + "\n")
+        file.write("::END::\n\n")
+        
 # end
