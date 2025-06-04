@@ -59,3 +59,5 @@ while running:
     screen.blit(bg_image, (0, 0)) 
 
 # end
+pygame.quit()
+sys.exit()
