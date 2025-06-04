@@ -25,4 +25,7 @@ def load_quiz(filename):
     return questions
 
 # load the quiz
+quiz_filename = "quiz.txt"  # Change to match the actual filename
+questions = load_quiz(quiz_filename)
+
 # end
