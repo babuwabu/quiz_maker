@@ -26,4 +26,10 @@ WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 BLUE = (70, 150, 255)
 
+# Ask user for the file name using text input
+labels = ["Question", "a)", "b)", "c)", "d)", "Correct Answer (a/b/c/d)"] # Labels
+inputs = [""] * len(labels)
+current_input = 0
+name = ""
+
 # end
