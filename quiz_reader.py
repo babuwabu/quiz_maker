@@ -67,4 +67,8 @@ else:
                 else:
                     print(f"❌ Wrong! 😢 The correct answer was {current_question['answer'].upper()}.")
 
-# end
+                # end
+                asked_questions.add(current_question)  # Mark question as answered
+                break  # Move to the next question
+            else:
+                print("⚠️ Invalid choice. Please enter A, B, C, or D.")
