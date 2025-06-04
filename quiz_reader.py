@@ -44,4 +44,13 @@ else:
         while current_question in asked_questions:
             current_question = random.choice(questions)
 
+        print("\n" + "=" * 50)
+        print(f"📌 Question: {current_question['question']}")
+        print("=" * 50)
+
+        for key, value in current_question["choices"].items():
+            print(f"   {key.upper()}) {value}")
+
+        print("=" * 50)
+
 # end
