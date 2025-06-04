@@ -2,6 +2,12 @@
 import pygame
 import sys
 
+pygame.init()
+pygame.mixer.init()
+pygame.mixer.music.load("02. Title Theme.mp3") 
+pygame.mixer.music.set_volume(0.3)      
+pygame.mixer.music.play(-1) 
+
 # Initialize Pygame window and font
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
