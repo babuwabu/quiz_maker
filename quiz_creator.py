@@ -75,7 +75,17 @@ while running:
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            running = False 
+            running = False
+
+        # Let the user navigate between fields (e.g. Tab key)
+        elif event.type == pygame.KEYDOWN:
+            if not file_named:
+                if event.key == pygame.K_RETURN and name.strip():
+                    file_named = True
+                elif event.key == pygame.K_BACKSPACE:
+                    name = name[:-1]
+                else:
+                    name += event.unicode
 
 # end
 pygame.quit()
