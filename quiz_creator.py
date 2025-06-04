@@ -103,6 +103,17 @@ while running:
                     running = False
                 else:
                     inputs[current_input] += event.unicode
+            
+            elif show_saved_message:
+                if event.key == pygame.K_y:
+                    inputs = [""] * len(labels)
+                    current_input = 0
+                    adding_question = True
+                    show_saved_message = False
+                elif event.key == pygame.K_n: # If user says no, quit
+                    running = False
+
+    clock.tick(30)
 
 # end
 pygame.quit()
