@@ -53,4 +53,18 @@ else:
 
         print("=" * 50)
 
+        while True:  # Keep asking until a valid answer is given
+            user_answer = input("Your answer (A/B/C/D, or 'Q' to quit): ").strip().lower()
+
+            if user_answer == 'q':
+                print("\n📊 Final Score:", score, "/", len(questions))
+                print("Thanks for playing!")
+                exit()
+            elif user_answer in current_question["choices"]:
+                if user_answer == current_question["answer"]:
+                    print("✅ Correct! 🎉")
+                    score += 1
+                else:
+                    print(f"❌ Wrong! 😢 The correct answer was {current_question['answer'].upper()}.")
+
 # end
